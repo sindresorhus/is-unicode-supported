@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = () => {
+export default function isUnicodeSupported() {
 	if (process.platform !== 'win32') {
 		return true;
 	}
@@ -10,4 +8,4 @@ module.exports = () => {
 		process.env.TERM_PROGRAM === 'vscode' ||
 		process.env.TERM === 'xterm-256color' ||
 		process.env.TERM === 'alacritty';
-};
+}
