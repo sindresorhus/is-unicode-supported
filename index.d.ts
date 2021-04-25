@@ -1,3 +1,5 @@
+declare namespace isUnicodeSupported { }
+
 /**
 Detect whether the terminal supports Unicode.
 
