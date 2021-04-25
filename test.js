@@ -9,6 +9,7 @@ test.serial('windows', t => {
 	delete process.env.CI;
 	delete process.env.TERM;
 	delete process.env.TERM_PROGRAM;
+	delete process.env.WT_SESSION;
 
 	const originalPlatform = process.platform;
 
@@ -18,5 +19,4 @@ test.serial('windows', t => {
 	t.true(isUnicodeSupported());
 
 	Object.defineProperty(process, 'platform', {value: originalPlatform});
-	delete process.env.WT_SESSION;
 });
