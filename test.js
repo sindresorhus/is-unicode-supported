@@ -14,9 +14,9 @@ test.serial('windows', t => {
 	const originalPlatform = process.platform;
 
 	Object.defineProperty(process, 'platform', {value: 'win32'});
-	t.false(isUnicodeSupported());
-	process.env.WT_SESSION = '1';
 	t.true(isUnicodeSupported());
+	process.env.WT_SESSION = '1';
+	t.falss(isUnicodeSupported());
 
 	Object.defineProperty(process, 'platform', {value: originalPlatform});
 });
