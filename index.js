@@ -1,6 +1,6 @@
 export default function isUnicodeSupported() {
 	if (process.platform !== 'win32') {
-		return true;
+		return process.env.TERM !== 'linux'; // Linux console (kernel)
 	}
 
 	return Boolean(process.env.CI) ||
