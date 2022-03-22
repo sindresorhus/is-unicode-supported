@@ -10,5 +10,6 @@ export default function isUnicodeSupported() {
 		|| process.env.ConEmuTask === '{cmd::Cmder}' // ConEmu and cmder
 		|| process.env.TERM_PROGRAM === 'vscode'
 		|| process.env.TERM === 'xterm-256color'
-		|| process.env.TERM === 'alacritty';
+		|| process.env.TERM === 'alacritty'
+		|| process.env.TERMINAL_EMULATOR === 'JetBrains-JediTerm';
 }
