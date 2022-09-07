@@ -11,6 +11,7 @@ test.serial('windows', t => {
 	delete process.env.TERM;
 	delete process.env.TERM_PROGRAM;
 	delete process.env.WT_SESSION;
+	delete process.env.TERMINUS_SUBLIME;
 
 	const originalPlatform = process.platform;
 
