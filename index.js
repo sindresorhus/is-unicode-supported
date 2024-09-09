@@ -15,5 +15,7 @@ export default function isUnicodeSupported() {
 		|| TERM_PROGRAM === 'vscode'
 		|| TERM === 'xterm-256color'
 		|| TERM === 'alacritty'
+		|| TERM === 'rxvt-unicode'
+		|| TERM === 'rxvt-unicode-256color'
 		|| env.TERMINAL_EMULATOR === 'JetBrains-JediTerm';
 }
